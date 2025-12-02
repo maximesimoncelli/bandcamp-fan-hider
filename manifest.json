@@ -1,0 +1,23 @@
+{
+  "name": "Bandcamp Fan Hider",
+  "description": "You love all your fans equally, but some of them you don't want to see.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": [
+                "https://*.bandcamp.com/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ]
+}
