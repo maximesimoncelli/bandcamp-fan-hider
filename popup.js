@@ -10,7 +10,6 @@ const listOfFansElement = document.getElementById("fan_list");
 const fanAddButton = document.getElementById("fan_add");
 
 const observer = new MutationObserver(function (mutationsList) {
-  console.log(mutationsList);
   mutationsList[0].addedNodes.forEach((addedNode) => {
     addedNode.childNodes.forEach((fanNode) => {
       if (fanNode.classList && fanNode.classList.contains("remove_fan")) {
